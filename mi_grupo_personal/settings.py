@@ -25,11 +25,15 @@ SECRET_KEY = 'django-insecure-7e%+g7ak4$)^=6wq16wnr(f_xb860su#%#*x#p&+h8t(9-_p5%
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = os.environ.get(
-    "ALLOWED_HOSTS",
-    "neyser-act-81.onrender.com localhost 127.0.0.1"
-).split()
-
+ALLOWED_HOSTS = [
+    "neyser-act-81.onrender.com",
+    ".onrender.com",
+    "localhost",
+    "127.0.0.1",
+]
+CSRF_TRUSTED_ORIGINS = [
+    "https://neyser-act-81.onrender.com",
+]
 
 # Application definition
 
