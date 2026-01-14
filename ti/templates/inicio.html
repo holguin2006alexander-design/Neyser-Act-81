@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+{% block title %}Inicio - Sistema de Gestión de Actividades{% endblock %}
+{% block content %}
+<main class="container-main">
+  <section class="card card-body text-center shadow-lg">
+    <h1 class="display-3" style="color: var(--primary-color);">
+      Sistema de Gestión de Actividades
+    </h1>
+    <p class="lead" style="color: var(--secondary-color);">
+      Organización y Control Eficiente
+    </p>
+
+    <div class="row g-4 my-4">
+      <div class="col-md-4">
+        <div class="card p-4 shadow-sm border-0" style="color: var(--primary-color); font-weight: 600;">
+          📋 Gestión Eficiente
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card p-4 shadow-sm border-0" style="color: var(--primary-color); font-weight: 600;">
+          ✅ Seguimiento Completo
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card p-4 shadow-sm border-0" style="color: var(--primary-color); font-weight: 600;">
+          🔒 Seguro y Privado
+        </div>
+      </div>
+    </div>
+
+    {% if user.is_authenticated %}
+      <a href="{% url 'actividades' %}" 
+         class="btn btn-lg me-2" 
+         style="background-color: var(--primary-color); border-color: var(--primary-color); color: #fff;">
+        Ver Mis Actividades
+      </a>
+      <a href="{% url 'crear_actividad' %}" 
+         class="btn btn-lg" 
+         style="background-color: var(--secondary-color); border-color: var(--secondary-color); color: #fff;">
+        Crear Nueva
+      </a>
+    {% else %}
+      <a href="{% url 'iniciar_sesion' %}" 
+         class="btn btn-lg me-2" 
+         style="background-color: var(--primary-color); border-color: var(--primary-color); color: #fff;">
+        Iniciar Sesión
+      </a>
+      <a href="{% url 'registro' %}" 
+         class="btn btn-lg" 
+         style="background-color: var(--secondary-color); border-color: var(--secondary-color); color: #fff;">
+        Registrarse
+      </a>
+    {% endif %}
+  </section>
+</main>
+{% endblock %}
