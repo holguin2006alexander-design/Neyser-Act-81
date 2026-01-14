@@ -72,12 +72,12 @@
             <th>Acciones</th>
         </tr>
 
-        {% for actividad in actividades %}
+        {% for task in tasks %}
         <tr>
-            <td>{{ actividad.nombre }}</td>
-            <td>{{ actividad.descripcion }}</td>
+            <td>{{ task.title }}</td>
+            <td>{{ task.description }}</td>
             <td>
-                <a href="{% url 'detalle_actividad' actividad.id %}">Ver</a>
+                <a href="{% url 'detalle_actividad' task.id %}">Ver</a>
             </td>
         </tr>
         {% endfor %}
