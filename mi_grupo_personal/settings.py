@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-7e%+g7ak4$)^=6wq16wnr(f_xb860su#%#*x#p&+h8t(9-_p5%
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    "neyser-act-81.onrender.com",
+    "neyser-act-81-1.onrender.com",
     ".onrender.com",
     "localhost",
     "127.0.0.1",
